@@ -12,11 +12,12 @@ const users = [
 
 function getUserAverageAge(array) {
   const totalAge = array.reduce((sum, user) => sum + user.age, 0);
-  return totalAge / array.length;
+  const averageAge = totalAge / array.length;
+  return Math.round(averageAge);
 }
 
-const averageAge = getUserAverageAge(users);
-console.log('Average Age:', averageAge);
+const averageAgeOfUsers = getUserAverageAge(users);
+console.log('Average Age:', averageAgeOfUsers);
 
 
 function getUsersNames(array) {
